@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-
+
+      - name: Install pipenv
+        run: pip install pipenv
+      
+      - name: Install dependencies
+        run: pipenv install --deploy --ignore-pipfile --system
+      
+      - name: Build site
+        run: mkdocs build 
