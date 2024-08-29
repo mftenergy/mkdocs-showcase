@@ -1,0 +1,978 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../diagrams/">
+      
+      
+        <link rel="next" href="../folder_structure/child/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
+    
+    
+      
+        <title>Changelog - Showcasing mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Showcasing mkdocs" class="md-header__button md-logo" aria-label="Showcasing mkdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Showcasing mkdocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Showcasing mkdocs" class="md-nav__button md-logo" aria-label="Showcasing mkdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Showcasing mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagrams in mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#material-for-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material for MkDocs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Material for MkDocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9.5.33" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.33 August 23, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.32" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.32 August 19, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.31" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.31 August 2, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.30" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.30 July 23, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.29" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.29 July 14, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.28" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.28 July 2, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.27" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.27 June 16, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.26" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.26 June 6, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.25" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.25 May 27, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.24" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.24 May 20, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.23" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.23 May 15, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.22" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.22 May 12, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.21" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.21 May 3, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.20" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.20 April 29, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.19" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.19 April 25, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.18" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.18 April 16, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.17" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.17 April 2, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.16" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.16 March 31, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.15" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.15 March 23, 2024
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Folder structure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Folder structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../folder_structure/child/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Navigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#material-for-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material for MkDocs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Material for MkDocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9.5.33" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.33 August 23, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.32" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.32 August 19, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.31" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.31 August 2, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.30" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.30 July 23, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.29" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.29 July 14, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.28" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.28 July 2, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.27" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.27 June 16, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.26" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.26 June 6, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.25" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.25 May 27, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.24" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.24 May 20, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.23" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.23 May 15, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.22" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.22 May 12, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.21" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.21 May 3, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.20" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.20 April 29, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.19" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.19 April 25, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.18" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.18 April 16, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.17" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.17 April 2, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.16" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.16 March 31, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9.5.15" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.15 March 23, 2024
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<h2 id="material-for-mkdocs">Material for MkDocs<a class="headerlink" href="#material-for-mkdocs" title="Permanent link">&para;</a></h2>
+<h3 id="9.5.33">9.5.33 <small>August 23, 2024</small><a class="headerlink" href="#9.5.33" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed #7453: Incorrect position of tooltip when sorting table</li>
+</ul>
+<h3 id="9.5.32">9.5.32 <small>August 19, 2024</small><a class="headerlink" href="#9.5.32" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed RXSS vulnerability via deep link in search results</li>
+<li>Added support for fetching latest release from GitLab</li>
+</ul>
+<h3 id="9.5.31">9.5.31 <small>August 2, 2024</small><a class="headerlink" href="#9.5.31" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed #7405: DockerHub missing images &gt; 9.5.27 due to change in Alpine/APK</li>
+</ul>
+<h3 id="9.5.30">9.5.30 <small>July 23, 2024</small><a class="headerlink" href="#9.5.30" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed #7380: Navigation icons disappearing on hover in Safari</li>
+<li>Fixed #7367: Blog readtime computation includes SVG text content</li>
+</ul>
+<h3 id="9.5.29">9.5.29 <small>July 14, 2024</small><a class="headerlink" href="#9.5.29" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Updated Galician translations</li>
+<li>Fixed #7362: Annotations in figure captions rendering incorrectly</li>
+</ul>
+<h3 id="9.5.28">9.5.28 <small>July 2, 2024</small><a class="headerlink" href="#9.5.28" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed #7313: Improved tooltips mounted in sidebar when feature is disabled</li>
+</ul>
+<h3 id="9.5.27">9.5.27 <small>June 16, 2024</small><a class="headerlink" href="#9.5.27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Updated Estonian translations</li>
+</ul>
+<h3 id="9.5.26">9.5.26 <small>June 6, 2024</small><a class="headerlink" href="#9.5.26" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed #7232: Tab switches on scroll when linking tabs (9.5.19 regression)</li>
+<li>Fixed #7230: Blog author avatar broken when referring to local file</li>
+</ul>
+<h3 id="9.5.25">9.5.25 <small>May 27, 2024</small><a class="headerlink" href="#9.5.25" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed #7209: Tags plugin crashing on numeric tags</li>
+</ul>
+<h3 id="9.5.24">9.5.24 <small>May 20, 2024</small><a class="headerlink" href="#9.5.24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed #7187: Version selector title rendering issue</li>
+</ul>
+<h3 id="9.5.23">9.5.23 <small>May 15, 2024</small><a class="headerlink" href="#9.5.23" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed #7183: Edge case in anchor navigation when using instant navigation</li>
+<li>Fixed #6436: Version selector not showing version alias</li>
+</ul>
+<h3 id="9.5.22">9.5.22 <small>May 12, 2024</small><a class="headerlink" href="#9.5.22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed #7170: Copy button adds empty lines for line spans (9.5.18 regression)</li>
+<li>Fixed #7160: Version switching doesn't stay on page (9.5.5 regression)</li>
+<li>Fixed #5619: Links in Mermaid.js diagrams not discernible</li>
+</ul>
+<h3 id="9.5.21">9.5.21 <small>May 3, 2024</small><a class="headerlink" href="#9.5.21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed #7133: Ensure latest version of Mermaid.js is used</li>
+<li>Fixed #7125: Added warning for dotfiles in info plugin</li>
+</ul>
+<h3 id="9.5.20">9.5.20 <small>April 29, 2024</small><a class="headerlink" href="#9.5.20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed deprecation warning in privacy plugin (9.5.19 regression)</li>
+<li>Fixed #7119: Tags plugin emits deprecation warning (9.5.19 regression)</li>
+<li>Fixed #7118: Social plugin crashes if fonts are disabled (9.5.19 regression)</li>
+<li>Fixed #7085: Social plugin crashes on Windows when downloading fonts</li>
+</ul>
+<h3 id="9.5.19">9.5.19 <small>April 25, 2024</small><a class="headerlink" href="#9.5.19" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Updated MkDocs to 1.6 and limited version to &lt; 2</li>
+<li>Updated Docker image to latest Alpine Linux</li>
+<li>Removed <code>setup.py</code>, now that GitHub fully understands <code>pyproject.toml</code></li>
+<li>Improved interop of social plugin with third-party MkDocs themes</li>
+<li>Fixed #7099: Blog reading time not rendered correctly for Japanese</li>
+<li>Fixed #7097: Improved resilience of tags plugin when no tags are given</li>
+<li>Fixed #7090: Active tab indicator in nested content tabs rendering bug</li>
+</ul>
+<h3 id="9.5.18">9.5.18 <small>April 16, 2024</small><a class="headerlink" href="#9.5.18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Refactored tooltips implementation to fix positioning issues</li>
+<li>Fixed #7044: Rendering glitch when hovering contributor avatar in Chrome</li>
+<li>Fixed #7043: Highlighted lines in code blocks cutoff on mobile</li>
+<li>Fixed #6910: Incorrect position of tooltip for page status in sidebar</li>
+<li>Fixed #6760: Incorrect position and overly long tooltip in tables</li>
+<li>Fixed #6488: Incorrect position and cutoff tooltip in content tabs</li>
+</ul>
+<h3 id="9.5.17">9.5.17 <small>April 2, 2024</small><a class="headerlink" href="#9.5.17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Updated Serbian translations</li>
+<li>Fixed #7003: Confusing keyboard interaction for palette toggle</li>
+<li>Fixed #7001: Blog posts now show time by default (9.5.16 regression)</li>
+<li>Fixed edge case in backport of social plugin font loading logic</li>
+</ul>
+<h3 id="9.5.16">9.5.16 <small>March 31, 2024</small><a class="headerlink" href="#9.5.16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Updated Russian translations</li>
+<li>Improved error handling and reporting in social plugin</li>
+<li>Improved error handling and reporting in privacy plugin</li>
+<li>Fixed blog plugin not allowing to use time in format strings</li>
+<li>Fixed #6983: Social plugin crashes because of Google Fonts API change</li>
+</ul>
+<h3 id="9.5.15">9.5.15 <small>March 23, 2024</small><a class="headerlink" href="#9.5.15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Reverted fix for transparent iframes (9.5.14)</li>
+<li>Fixed #6929: Interference of social plugin and auto dark mode</li>
+<li>Fixed #6938: Giscus shows dark background in light mode (9.5.14 regression)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "content.code.select", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.471ce7a9.min.js"></script>
+      
+    
+  </body>
+</html>
